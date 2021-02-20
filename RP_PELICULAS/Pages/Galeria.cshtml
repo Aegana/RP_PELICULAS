@@ -1,0 +1,61 @@
+﻿@page
+@model RP_PELICULAS.Pages.GaleriaModel
+@{
+
+    ViewData["Title"] = "GALERIA";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    <link rel="stylesheet" href="~/css/MiEstilo.css" />
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css'>
+}
+
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 class="gallery-title">BBBootstrap Restaurant</h1>
+        </div>
+        <div align="center"> <button class="btn btn-default filter-button" data-filter="all">All</button> <button class="btn btn-default filter-button" data-filter="hdpe">Vegetarian</button> <button class="btn btn-default filter-button" data-filter="sprinkle">Non Vegetarian</button> <button class="btn btn-default filter-button" data-filter="spray">Sides</button> <button class="btn btn-default filter-button" data-filter="irrigation">Meal below 99</button> </div> <br />
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe"><a href=""> <img src=https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033828/Restaurant/img-1.jpg class="img-responsive"></a> </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle"><a href=""> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-6.jpg" class="img-responsive"></a> </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe"><a href=""> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033828/Restaurant/img-3.jpg" class="img-responsive"></a> </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation"><a href=""> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033828/Restaurant/img-4.jpg" class="img-responsive"></a> </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray"><a href=""> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033828/Restaurant/img-5.jpg" class="img-responsive"></a> </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation"><a href=""> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-2.jpg" class="img-responsive"></a> </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray"><a href=""> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033829/Restaurant/img-7.jpg" class="img-responsive"></a> </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation"><a href=""> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033828/Restaurant/img-3.jpg" class="img-responsive"></a> </div>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation"><a href=""> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1564033828/Restaurant/img-5.jpg" class="img-responsive"></a> </div>
+    </div>
+</div>
+
+
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+<script>
+    $(document).ready(function () {
+
+        $(".filter-button").click(function () {
+            var value = $(this).attr('data-filter');
+
+            if (value == "all") {
+
+                $('.filter').show('1000');
+            }
+            else {
+
+                $(".filter").not('.' + value).hide('3000');
+                $('.filter').filter('.' + value).show('3000');
+
+            }
+        });
+
+        if ($(".filter-button").removeClass("active")) {
+            $(this).removeClass("active");
+        }
+        $(this).addClass("active");
+
+    });
+</script>
