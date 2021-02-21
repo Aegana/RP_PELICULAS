@@ -15,12 +15,14 @@
         border-bottom: 1px solid #5e5e5e
     }
 
+
+
 .filter-button {
     font-size: 18px;
     border: 1px solid #FFA500;
     border-radius: 5px;
     text-align: center;
-    color: #FFA500;
+    color: #00ff84;
     margin-bottom: 30px
 }
 
@@ -34,7 +36,7 @@
     }
 
 .btn-default:active .filter-button:active {
-    background-color: #FFA500;
+    background-color: #00ff84;
     color: white
 }
 
